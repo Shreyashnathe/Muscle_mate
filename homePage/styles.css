@@ -1,0 +1,475 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Sticky Navbar */
+  header {
+    background: #131313;
+    border: 2px solid rgb(70 67 67);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+  
+  /* ====LOGO==== */
+  /* Logo Styles */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    /* margin-right: 10px; */
+  
+  }
+  
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+  }
+  
+  .logo-name {
+    margin-bottom: -5px;
+    padding-left: 0px; /* Move "Muscle Mate" slightly higher */
+  }
+  
+  .made-in-india {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #666; /* Gray color for "MADE IN INDIA" */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between flag and text */
+    margin-left: 1px;
+  }
+  
+  .made-in-india img {
+    vertical-align: middle; /* Align flag icon with text */
+  }
+  /* ========LOGO END==== */
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #ff6f61;
+  }
+  
+  /* Profile Icon */
+  .profile-icon img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-icon img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    list-style: none;
+    min-width: 150px;
+  }
+  
+  .dropdown-menu li {
+    padding: 0.5rem 1rem;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #ff6f61;
+  }
+  
+  /* Arrow Styling */
+  .arrow {
+    font-size: 0.8rem;
+    margin-left: -3px;
+    vertical-align: middle;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    min-height: 60vh;
+    max-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero h1, .hero p, .hero .cta {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .cta {
+    background: #ff6f61;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .cta:hover {
+    background: #ff4a3d;
+  }
+  
+  /* Features Section */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0;
+  }
+  
+  .feature {
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px); /* Lift the card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+  }
+  
+  .feature img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature:hover img {
+    transform: scale(1.05); /* Slightly zoom in the image on hover */
+  }
+  
+  .feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .feature:hover h2 {
+    color: #ff6f61; /* Change the title color on hover */
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .feature:hover p {
+    color: #333; /* Darken the text color on hover */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 0.4rem 0;
+    background: #333;
+    color: white;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .logo {
+      margin-bottom: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .logo img {
+      width: 70px;
+      height: 60px;
+    }
+  
+    ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  
+    .hero {
+      padding: 2rem 1rem;
+      min-height: 20vh;
+      max-height: 20vh;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+  
+    .features {
+      grid-template-columns: 1fr;
+      padding: 1.5rem 1rem;
+      gap: 1.5rem;
+      margin-top: 0;
+    }
+  
+    .feature {
+      padding: 1rem;
+    }
+  
+    .feature img {
+      height: 150px;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      display: none;
+      background: #444;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Tablet Responsive Design */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 2rem 1.5rem;
+      margin-top: 0;
+    }
+  
+    .hero {
+      min-height: 30vh;
+      max-height: 30vh;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Large Screen Responsive Design */
+  @media (min-width: 1025px) {
+    .hero {
+      padding: 4rem 2rem;
+      min-height: 40vh;
+      max-height: 40vh;
+    }
+  
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.8rem;
+      margin: 2rem 0;
+    }
+  
+    .features {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2.5rem 2rem;
+      gap: 2.5rem;
+      margin-top: 0;
+    }
+  
+    .feature {
+      padding: 2rem;
+    }
+  
+    .feature img {
+      height: 250px;
+    }
+  
+    .feature h2 {
+      font-size: 1.8rem;
+      margin: 1.5rem 0;
+    }
+  
+    .feature p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+  
+  /* Extra Large Screen Responsive Design */
+  @media (min-width: 1440px) {
+    .hero {
+      min-height: 50vh;
+      max-height: 50vh;
+    }
+  
+    .hero h1 {
+      font-size: 4rem;
+    }
+  
+    .hero p {
+      font-size: 2rem;
+    }
+  
+    .features {
+      max-width: 1400px;
+      padding: 4rem 2rem;
+      margin-top: 0;
+    }
+  
+    .feature {
+      padding: 2.5rem;
+    }
+  
+    .feature img {
+      height: 300px;
+    }
+  }
+  
+  /* Landscape Mode for Mobile */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+      min-height: 60vh;
+      max-height: 60vh;
+      padding: 1.5rem 1rem;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+  
+    .features {
+      padding: 1rem;
+      margin-top: 0;
+    }
+  }
+  
+  /* High DPI Screens */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .hero {
+      background: none !important;
+      color: #000;
+    }
+  
+    .hero::before {
+      display: none;
+    }
+  
+    .features {
+      break-inside: avoid;
+    }
+  }

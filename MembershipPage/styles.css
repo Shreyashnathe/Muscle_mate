@@ -1,0 +1,271 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f4f4f4; /* Light background for the page */
+}
+
+/* Sticky Navbar */
+header {
+  background: #131313;
+  border: 2px solid rgb(70 67 67);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/*========= Logo Starts======= */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-name {
+  margin-bottom: -5px;
+  padding-left: 0px;
+}
+
+.made-in-india {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 1px;
+}
+
+.made-in-india img {
+  vertical-align: middle;
+}
+/* =======logo end========== */
+
+/* Navigation Links */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Profile Icon */
+.profile-icon img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  list-style: none;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Arrow Styling */
+.arrow {
+  font-size: 0.8rem;
+  margin-left: -3px;
+  vertical-align: middle;
+}
+
+/* Membership Section */
+.membership {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.membership h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.plans {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center cards on smaller screens */
+}
+
+.plan-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  min-width: 250px; /* Minimum width for cards */
+  max-width: 300px; /* Maximum width for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card p {
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.plan-card ul li {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.plan-card button {
+  background: #ff6f61;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.plan-card button:hover {
+  background: #ff4a3d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: #444;
+  }
+
+  .membership h1 {
+    font-size: 2rem;
+  }
+
+  .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership h1 {
+    font-size: 1.8rem;
+  }
+
+  .plan-card {
+    padding: 1rem;
+  }
+
+  .plan-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .plan-card p {
+    font-size: 1.5rem;
+  }
+
+  .plan-card button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

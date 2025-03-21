@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Muscle Mate</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <!-- Header (Same as Home Page) -->
+
+  <!-- Save Nav Bar and footer for all the Pages -->
+  <header>
+
+    <!-- Save Nav Bar and footer for all the Pages -->
+
+    <nav>
+      <!-- ===LOGO=========== -->
+      <div class="logo">
+        <!-- <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40">
+          <circle cx="50" cy="50" r="45" fill="#ff6f61" />
+          <path d="M30 60 L30 40 L40 40 L40 60 Z M60 60 L60 40 L70 40 L70 60 Z M40 50 L60 50 Z M50 30 L50 70 Z" fill="white" />
+        </svg> -->
+        <img src="logo_main.png" alt="LOGO" width="90" height="70">
+        <div class="logo-text">
+          <span class="logo-name">Muscle Mate</span>
+          <span class="made-in-india">
+            <img src="https://flagcdn.com/in.svg" alt="India Flag" width="16" height="12"> <!-- Indian flag icon -->
+            MADE IN INDIA
+          </span>
+        </div>
+      </div>
+      <!-- ====================== -->
+      <ul>
+        <li><a href="http://127.0.0.1:3000/homePage/home.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)">
+            Features <span class="arrow">▼</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://127.0.0.1:3000/homePage/Features/yoga/index.html">Yoga</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/AI workout/ai-workout.html">AI Workout</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/Progress T/index.html">Progress Tracker</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:3000/MembershipPage/membership.html">Membership</a></li>
+        <li><a href="http://127.0.0.1:3000/ContachPage/contact.html">Contact</a></li>
+        <!-- Profile Icon -->
+        <li class="profile-icon">
+          <a href="http://127.0.0.1:3000/ProfilePage/profile.html">
+            <img src="profile.png" alt="Profile" width="30" height="30">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile-container">
+    <h2>Your Profile</h2>
+    <form id="profile-form">
+      <div class="profile-picture">
+        <label for="profile-photo">
+          <img id="profile-preview" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Picture">
+          <p class="profile-photo-label">Profile Photo</p> <!-- Added label here -->
+          <input type="file" id="profile-photo" accept="image/*" onchange="previewProfilePhoto(event)">
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter your weight" required>
+      </div>
+      <div class="form-group">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter your height" required>
+      </div>
+      <button type="submit">Save Profile</button>
+    </form>
+  </section>
+
+  <!-- Footer (Same as Home Page) -->
+  <footer>
+    <p>&copy; 2025 Muscle Mate. All rights reserved.</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>

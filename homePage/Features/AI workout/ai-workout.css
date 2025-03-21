@@ -1,0 +1,248 @@
+
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Sticky Navbar */
+header {
+  background: #131313;
+  border: 2px solid rgb(70 67 67);
+  color: white;
+  /* padding: 0.3rem 0; */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* ====LOGO==== */
+/* Logo Styles */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+}
+
+.logo-name {
+  margin-bottom: -5px; /* Move "Muscle Mate" slightly higher */
+  padding-left: 0px;
+}
+
+.made-in-india {
+  font-size: 0.8rem; /* Smaller font size */
+  color: #666; /* Gray color for "MADE IN INDIA" */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between flag and text */
+  margin-left: 1px;
+}
+
+.made-in-india img {
+  vertical-align: middle; /* Align flag icon with text */
+}
+/* ========LOGO END==== */
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Align items vertically */
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Profile Icon */
+.profile-icon img {
+  border-radius: 50%; /* Make the profile icon circular */
+  transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.1); /* Add hover effect */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  list-style: none;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Arrow Styling */
+.arrow {
+  font-size: 0.8rem;
+  margin-left: -3px;
+  vertical-align: middle;
+}
+
+
+
+/* =================================== */
+
+
+/* AI Workout Planner Styles */
+.ai-workout-planner {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.ai-workout-planner h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ff6f61;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.ai-workout-planner form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.ai-workout-planner label {
+  font-weight: bold;
+}
+
+.ai-workout-planner input,
+.ai-workout-planner select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-workout-planner input:focus,
+.ai-workout-planner select:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+  outline: none;
+}
+
+.ai-workout-planner button {
+  background: #ff6f61;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ai-workout-planner button:hover {
+  background: #ff4a3d;
+  transform: scale(1.05);
+}
+
+.output {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Background Animation */
+body {
+  background: linear-gradient(135deg, #ff6f61, #ff4a3d);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  display: block;
+  margin: 0px;
+}
+/* ====FOOTER=== */
+footer {
+  text-align: center;
+  padding: 0.4rem 0;
+  background: #333;
+  color: white;
+}

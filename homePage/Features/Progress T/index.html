@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTrack Pro - Your Fitness Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <!-- Save Nav Bar and footer for all the Pages -->
+    
+        <nav>
+          <!-- ===LOGO=========== -->
+          <div class="logo">
+            <!-- <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40">
+              <circle cx="50" cy="50" r="45" fill="#ff6f61" />
+              <path d="M30 60 L30 40 L40 40 L40 60 Z M60 60 L60 40 L70 40 L70 60 Z M40 50 L60 50 Z M50 30 L50 70 Z" fill="white" />
+            </svg> -->
+            <img src="logo_main.png" alt="LOGO" width="90" height="70">
+            <div class="logo-text">
+              <span class="logo-name">Muscle Mate</span>
+              <span class="made-in-india">
+                <img src="https://flagcdn.com/in.svg" alt="India Flag" width="16" height="12"> <!-- Indian flag icon -->
+                MADE IN INDIA
+              </span>
+            </div>
+          </div>
+          <!-- ====================== -->
+          <ul>
+            <li><a href="http://127.0.0.1:3000/homePage/home.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown(event)">
+                Features <span class="arrow">▼</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="http://127.0.0.1:3000/homePage/Features/yoga/index.html">Yoga</a></li>
+                <li><a href="http://127.0.0.1:3000/homePage/Features/AI workout/ai-workout.html">AI Workout</a></li>
+                <li><a href="http://127.0.0.1:3000/homePage/Features/Progress T/index.html">Progress Tracker</a></li>
+              </ul>
+            </li>
+            <li><a href="http://127.0.0.1:3000/MembershipPage/membership.html">Membership</a></li>
+            <li><a href="http://127.0.0.1:3000/ContachPage/contact.html">Contact</a></li>
+            <!-- Profile Icon -->
+            <li class="profile-icon">
+              <a href="http://127.0.0.1:3000/profilePage/profile.html">
+                <img src="profile.png" alt="Profile" width="30" height="30">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <main class="main-content-wrapper">
+        <div class="container">
+            <div class="content-layout">
+                <div class="main-content">
+                    <div class="input-section">
+                        <h2><i class="fas fa-plus-circle"></i> Log Your Workout</h2>
+                        <form id="progressForm">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="currentWeight">Current Weight (kg):</label>
+                                    <input type="number" id="currentWeight" required min="0" step="0.1" placeholder="Enter your weight">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="height">Height (cm):</label>
+                                    <input type="number" id="height" required min="0" step="0.1" placeholder="Enter your height">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="workoutType">Workout Type:</label>
+                                    <select id="workoutType" required>
+                                        <option value="">Select Workout Type</option>
+                                        <option value="Strength">Strength Training</option>
+                                        <option value="Cardio">Cardio</option>
+                                        <option value="HIIT">HIIT</option>
+                                        <option value="Yoga">Yoga</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exercise">Exercise:</label>
+                                    <select id="exercise" required>
+                                        <option value="">Select Exercise</option>
+                                        <!-- Strength Training -->
+                                        <optgroup label="Strength Training">
+                                            <option value="Bench Press">Bench Press</option>
+                                            <option value="Squats">Squats</option>
+                                            <option value="Deadlift">Deadlift</option>
+                                            <option value="Shoulder Press">Shoulder Press</option>
+                                            <option value="Pull Ups">Pull Ups</option>
+                                            <option value="Rows">Rows</option>
+                                        </optgroup>
+                                        <!-- Cardio -->
+                                        <optgroup label="Cardio">
+                                            <option value="Running">Running</option>
+                                            <option value="Cycling">Cycling</option>
+                                            <option value="Swimming">Swimming</option>
+                                            <option value="Jump Rope">Jump Rope</option>
+                                        </optgroup>
+                                        <!-- HIIT -->
+                                        <optgroup label="HIIT">
+                                            <option value="Burpees">Burpees</option>
+                                            <option value="Mountain Climbers">Mountain Climbers</option>
+                                            <option value="Jump Squats">Jump Squats</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="duration">Duration (minutes):</label>
+                                    <input type="number" id="duration" required min="1" placeholder="Exercise duration">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="caloriesBurned">Calories Burned:</label>
+                                    <input type="number" id="caloriesBurned" required min="0" placeholder="Estimated calories">
+                                </div>
+
+                                <div class="form-group weight-input" style="display: none;">
+                                    <label for="weight">Weight Used (kg):</label>
+                                    <input type="number" id="weight" min="0" step="0.5" placeholder="Weight used">
+                                </div>
+
+                                <div class="form-group sets-input" style="display: none;">
+                                    <label for="sets">Sets:</label>
+                                    <input type="number" id="sets" min="1" placeholder="Number of sets">
+                                </div>
+
+                                <div class="form-group reps-input" style="display: none;">
+                                    <label for="reps">Reps:</label>
+                                    <input type="number" id="reps" min="1" placeholder="Reps per set">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="intensity">Intensity Level:</label>
+                                    <select id="intensity" required>
+                                        <option value="">Select Intensity</option>
+                                        <option value="Low">Low</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="High">High</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="date">Date:</label>
+                                    <input type="date" id="date" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="notes">Notes:</label>
+                                    <textarea id="notes" rows="2" placeholder="Add any notes about your workout"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-plus"></i> Log Workout
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <i class="fas fa-trophy"></i>
+                                <h3>Personal Best</h3>
+                                <p id="personalBest">0 kg</p>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-fire"></i>
+                                <h3>Total Volume</h3>
+                                <p id="totalVolume">0 kg</p>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-clock"></i>
+                                <h3>Workouts</h3>
+                                <p id="totalWorkouts">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history-section">
+                        <h2><i class="fas fa-history"></i> Recent Progress</h2>
+                        <div class="progress-list" id="progressList">
+                            <!-- Progress entries will be added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="graph-sidebar">
+                    <div class="graph-section">
+                        <h2><i class="fas fa-chart-line"></i> Progress Graph</h2>
+                        <div class="graph-controls">
+                            <div class="graph-time-range">
+                                <button class="time-range-btn active" data-range="7">Last 7 Days</button>
+                                <button class="time-range-btn" data-range="30">Last 30 Days</button>
+                                <button class="time-range-btn" data-range="90">Last 90 Days</button>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                        <div class="graph-legend">
+                            <div class="legend-item">
+                                <div class="legend-color weight-color"></div>
+                                <span>Weight (kg)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color bmi-color"></div>
+                                <span>BMI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Muscle Mate. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

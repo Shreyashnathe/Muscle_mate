@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workout Planner - Muscle Mate</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="ai-workout.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+
+    <!-- Save Nav Bar and footer for all the Pages -->
+
+
+    <nav>
+      <!-- ===LOGO=========== -->
+      <div class="logo">
+        <img src="logo_main.png" alt="LOGO" width="90" height="70">
+        <div class="logo-text">
+          <span class="logo-name">Muscle Mate</span>
+          <span class="made-in-india">
+            <img src="https://flagcdn.com/in.svg" alt="India Flag" width="16" height="12"> <!-- Indian flag icon -->
+            MADE IN INDIA
+          </span>
+        </div>
+      </div>
+      <!-- ====================== -->
+      <ul>
+        <li><a href="http://127.0.0.1:3000/homePage/home.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)">
+            Features <span class="arrow">▼</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://127.0.0.1:3000/homePage/Features/yoga/index.html">Yoga</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/AI workout/ai-workout.html">AI Workout</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/Progress T/index.html">Progress Tracker</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:3000/MembershipPage/membership.html">Membership</a></li>
+        <li><a href="http://127.0.0.1:3000/ContachPage/contact.html">Contact</a></li>
+        <!-- Profile Icon -->
+        <li class="profile-icon">
+          <a href="http://127.0.0.1:3000/profilePage/profile.html">
+            <img src="profile.png" alt="Profile" width="30" height="30">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- AI Workout Section -->
+  <section class="ai-workout-planner">
+    <h2>AI-Powered Workout Planner</h2>
+    <form id="workout-form">
+      <label for="goal">Fitness Goal:</label>
+      <select id="goal" required>
+        <option value="weight_loss">Weight Loss</option>
+        <option value="muscle_gain">Muscle Gain</option>
+        <option value="endurance">Endurance</option>
+        <option value="general_fitness">General Fitness</option>
+      </select>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" required min="10" max="100">
+
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" required min="30" max="200">
+
+      <label for="experience">Experience Level:</label>
+      <select id="experience" required>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+
+      <button type="submit">Generate Workout Plan</button>
+    </form>
+
+    <div id="workout-plan-output" class="output">
+      <!-- Workout plan will be displayed here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Muscle Mate. All rights reserved.</p>
+  </footer>
+
+  <script src="ai-workout.js"></script>
+</body>
+</html>

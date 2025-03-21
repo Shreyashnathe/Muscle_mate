@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muscle Mate - Membership</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+
+    <!-- Save Nav Bar and footer for all the Pages -->
+    <nav>
+      <!-- ===LOGO=========== -->
+      <div class="logo">
+        <!-- <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40">
+          <circle cx="50" cy="50" r="45" fill="#ff6f61" />
+          <path d="M30 60 L30 40 L40 40 L40 60 Z M60 60 L60 40 L70 40 L70 60 Z M40 50 L60 50 Z M50 30 L50 70 Z" fill="white" />
+        </svg> -->
+        <img src="logo_main.png" alt="LOGO" width="90" height="70">
+        <div class="logo-text">
+          <span class="logo-name">Muscle Mate</span>
+          <span class="made-in-india">
+            <img src="https://flagcdn.com/in.svg" alt="India Flag" width="16" height="12"> <!-- Indian flag icon -->
+            MADE IN INDIA
+          </span>
+        </div>
+      </div>
+      <!-- ====================== -->
+      <ul>
+        <li><a href="http://127.0.0.1:3000/homePage/home.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)">
+            Features <span class="arrow">▼</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://127.0.0.1:3000/homePage/Features/yoga/index.html">Yoga</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/AI workout/ai-workout.html">AI Workout</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/Progress T/index.html">Progress Tracker</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:3000/MembershipPage/membership.html">Membership</a></li>
+        <li><a href="http://127.0.0.1:3000/ContachPage/contact.html">Contact</a></li>
+        <!-- Profile Icon -->
+        <li class="profile-icon">
+          <a href="http://127.0.0.1:3000/profilePage/profile.html">
+            <img src="profile.png" alt="Profile" width="30" height="30">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="membership">
+    <h1>Membership Plans</h1>
+    <div class="plans">
+      <div class="plan-card">
+        <h2>Basic</h2>
+        <p>$29/month</p>
+        <ul>
+          <li>Access to Gym</li>
+          <li>1 Personal Training Session</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+      <div class="plan-card">
+        <h2>Premium</h2>
+        <p>$59/month</p>
+        <ul>
+          <li>Access to Gym</li>
+          <li>5 Personal Training Sessions</li>
+          <li>Diet Plan</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+      <div class="plan-card">
+        <h2>Pro</h2>
+        <p>$99/month</p>
+        <ul>
+          <li>Access to Gym</li>
+          <li>Unlimited Personal Training</li>
+          <li>Diet Plan</li>
+          <li>Access to Spa</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

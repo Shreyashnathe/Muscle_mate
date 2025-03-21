@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Yoga Routine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Save Nav Bar and footer for all the Pages -->
+        <nav>
+          <!-- ===LOGO=========== -->
+          <div class="logo">
+            <img src="logo_main.png" alt="LOGO" width="90" height="70">
+            <div class="logo-text">
+              <span class="logo-name">Muscle Mate</span>
+              <span class="made-in-india">
+                <img src="https://flagcdn.com/in.svg" alt="India Flag" width="16" height="12"> <!-- Indian flag icon -->
+                MADE IN INDIA
+              </span>
+            </div>
+          </div>
+          <!-- ====================== -->
+          <ul>
+            <li><a href="http://127.0.0.1:3000/homePage/home.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown(event)">
+                Features <span class="arrow">▼</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="http://127.0.0.1:3000/homePage/Features/yoga/index.html">Yoga</a></li>
+                <li><a href="http://127.0.0.1:3000/homePage/Features/AI workout/ai-workout.html">AI Workout</a></li>
+                <li><a href="http://127.0.0.1:3000/homePage/Features/Progress T/index.html">Progress Tracker</a></li>
+              </ul>
+            </li>
+            <li><a href="http://127.0.0.1:3000/MembershipPage/membership.html">Membership</a></li>
+            <li><a href="http://127.0.0.1:3000/ContachPage/contact.html">Contact</a></li>
+            <!-- Profile Icon -->
+            <li class="profile-icon">
+              <a href="http://127.0.0.1:3000/profilePage/profile.html">
+                <img src="profile.png" alt="Profile" width="30" height="30">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <div class="container">
+        <h1>Daily Yoga Routine</h1>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="completedCount">0</span>
+                    <span class="stat-label">Asanas Completed</span>
+                </div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-fire"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="caloriesBurned">0</span>
+                    <span class="stat-label">Calories Burned</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-buttons">
+            <button class="day-btn active" data-day="monday">Monday</button>
+            <button class="day-btn" data-day="tuesday">Tuesday</button>
+            <button class="day-btn" data-day="wednesday">Wednesday</button>
+            <button class="day-btn" data-day="thursday">Thursday</button>
+            <button class="day-btn" data-day="friday">Friday</button>
+            <button class="day-btn" data-day="saturday">Saturday</button>
+            <button class="day-btn" data-day="sunday">Sunday</button>
+        </div>
+        <div class="schedule-container">
+            <!-- Content will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Muscle Mate. All rights reserved.</p>
+      </footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

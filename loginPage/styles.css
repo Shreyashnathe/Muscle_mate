@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Sticky Navbar */
+header {
+  background: #131313;
+  border: 2px solid rgb(70 67 67);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* ====LOGO==== */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-name {
+  margin-bottom: -5px;
+  padding-left: 0px;
+}
+
+.made-in-india {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 1px;
+}
+
+.made-in-india img {
+  vertical-align: middle;
+}
+/* ========LOGO END==== */
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Profile Icon */
+.profile-icon img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  list-style: none;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Arrow Styling */
+.arrow {
+  font-size: 0.8rem;
+  margin-left: -3px;
+  vertical-align: middle;
+}
+
+/* ============================================= */
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: url('loginBG.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Fixed background for parallax effect */
+  color: white;
+  position: fixed; /* Fix the hero section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Login Container */
+.login-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.login-container h1 {
+  color: #333;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+  outline: none;
+}
+
+.login-container button {
+  width: 90%;
+  padding: 0.5rem;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #ff4a3d;
+  transform: scale(1.05);
+}
+
+.login-container p {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.login-container a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+  color: #ff4a3d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .login-container {
+    padding: 1rem;
+    max-width: 300px;
+  }
+
+  .login-container h1 {
+    font-size: 1.5rem;
+  }
+}

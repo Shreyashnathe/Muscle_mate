@@ -1,0 +1,257 @@
+/* HEADER */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Sticky Navbar */
+header {
+  background: #131313;
+  border: 2px solid rgb(70 67 67);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+/* ====LOGO==== */
+/* Logo Styles */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+}
+
+.logo-name {
+  margin-bottom: -5px; /* Move "Muscle Mate" slightly higher */
+  padding-left: 0px;
+}
+
+.made-in-india {
+  font-size: 0.8rem; /* Smaller font size */
+  color: #666; /* Gray color for "MADE IN INDIA" */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between flag and text */
+  margin-left: 1px;
+}
+
+.made-in-india img {
+  vertical-align: middle; /* Align flag icon with text */
+}
+/* ========LOGO END==== */
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ff6f61;
+}
+/* ================================= */
+
+/* Profile Icon */
+.profile-icon img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  list-style: none;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Arrow Styling */
+.arrow {
+  font-size: 0.8rem;
+  margin-left: -3px;
+  vertical-align: middle;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.profile-container h2 {
+  margin-bottom: 0.2rem;
+  color: #333;
+}
+
+/* Profile Picture */
+.profile-picture {
+  margin-bottom: 0.5rem;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-picture img:hover {
+  transform: scale(1.1);
+}
+
+.profile-picture input[type="file"] {
+  display: none;
+}
+
+.profile-photo-label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-photo-label:hover {
+  color: #ff6f61;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input, .form-group select {
+  width: 94%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3sease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+
+/* Save Button */
+button[type="submit"] {
+  background: #ff6f61;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #ff4a3d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: #444;
+  }
+}
+
+
+/* FOOTER===== */
+footer {
+  text-align: center;
+  padding: 0.4rem 0;
+  background: #333;
+  color: white;
+}

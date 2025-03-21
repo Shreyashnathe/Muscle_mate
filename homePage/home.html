@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muscle Mate - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Save Nav Bar and footer for all the Pages -->
+    <nav>
+      <!-- ===LOGO=========== -->
+      <div class="logo">
+        <img src="logo_main.png" alt="LOGO" width="90" height="70">
+        <div class="logo-text">
+          <span class="logo-name">Muscle Mate</span>
+          <span class="made-in-india">
+            <img src="https://flagcdn.com/in.svg" alt="India Flag" width="16" height="12"> <!-- Indian flag icon -->
+            MADE IN INDIA
+          </span>
+        </div>
+      </div>
+      <!-- ====================== -->
+      <ul>
+        <li><a href="http://127.0.0.1:3000/homePage/home.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)">
+            Features <span class="arrow">▼</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://127.0.0.1:3000/homePage/Features/yoga/index.html">Yoga</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/AI workout/ai-workout.html">AI Workout</a></li>
+            <li><a href="http://127.0.0.1:3000/homePage/Features/Progress T/index.html">Progress Tracker</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:3000/MembershipPage/membership.html">Membership</a></li>
+        <li><a href="http://127.0.0.1:3000/ContachPage/contact.html">Contact</a></li>
+        <!-- Profile Icon -->
+        <li class="profile-icon">
+          <a href="http://127.0.0.1:3000/profilePage/profile.html">
+            <img src="profile.png" alt="Profile" width="30" height="30">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="hero">
+
+    <h1>Welcome to Muscle Mate</h1>
+    <p>Your ultimate gym management solution</p>
+    <!-- ---------------------------------------------- onclick="showLogin()"  -->
+    <a href="http://127.0.0.1:3000/loginPage/login.html" class="cta" >Get Started</a>
+  </section>
+  <section class="features">
+    <div class="feature">
+      <img src="stateofArt.avif" alt="Gym Equipment">
+      <h2>State-of-the-Art Equipment</h2>
+      <p>We provide the latest gym equipment to help you achieve your fitness goals.</p>
+    </div>
+    <div class="feature">
+      <img src="expertTrainers.jpg" alt="Personal Trainer">
+      <h2>Expert Trainers</h2>
+      <p>Our certified trainers are here to guide you every step of the way.</p>
+    </div>
+    <div class="feature">
+      <img src="classes.jpg" alt="Group Classes">
+      <h2>Group Classes</h2>
+      <p>Join our group classes and stay motivated with like-minded people.</p>
+    </div>
+    <!-- New Grids Added Below -->
+    <div class="feature">
+      <img src="Nutrition.jpg" alt="Nutrition Plans">
+      <h2>Nutrition Plans</h2>
+      <p>Customized nutrition plans to complement your fitness journey.</p>
+    </div>
+    <div class="feature">
+      <img src="wellnessProg.webp" alt="Wellness Programs">
+      <h2>Wellness Programs</h2>
+      <p>Holistic wellness programs to improve your overall health.</p>
+    </div>
+    <div class="feature">
+      <img src="community.avif" alt="Community Support">
+      <h2>Community Support</h2>
+      <p>Join a supportive community to stay motivated and connected.</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Muscle Mate. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

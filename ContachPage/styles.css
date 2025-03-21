@@ -1,0 +1,366 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Sticky Navbar */
+header {
+  background: #131313;
+  border: 2px solid rgb(70 67 67);
+  color: white;
+  /* padding: 0.3rem 0; */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* ====LOGO==== */
+/* Logo Styles */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+}
+
+.logo-name {
+  margin-bottom: -5px; /* Move "Muscle Mate" slightly higher */
+  padding-left: 0px;
+}
+
+.made-in-india {
+  font-size: 0.8rem; /* Smaller font size */
+  color: #666; /* Gray color for "MADE IN INDIA" */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between flag and text */
+  margin-left: 1px;
+}
+
+.made-in-india img {
+  vertical-align: middle; /* Align flag icon with text */
+}
+/* ========LOGO END==== */
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Align items vertically */
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Profile Icon */
+.profile-icon img {
+  border-radius: 50%; /* Make the profile icon circular */
+  transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.1); /* Add hover effect */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  list-style: none;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Arrow Styling */
+.arrow {
+  font-size: 0.8rem;
+  margin-left: -3px;
+  vertical-align: middle;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  animation: slideIn 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cta {
+  background: #ff6f61;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cta:hover {
+  background: #ff4a3d;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0.4rem 0;
+  background: #333;
+  color: white;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .feature {
+    margin-bottom: 2rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: #444;
+  }
+}
+
+
+/* ======================================================== */
+
+/* About Section */
+.about-website {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-website h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ff6f61;
+}
+
+/* Team Section */
+.team {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ff6f61;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.member {
+  width: 30%;
+  margin: 1rem;
+  text-align: center;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Keep the circular shape */
+  object-fit: cover; /* Ensure the image fits well */
+  border: none; /* Remove the border */
+  background: none; /* Ensure no background color */
+}
+
+.member h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.member p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+/* Terms Section */
+.terms {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ff6f61;
+}
+
+.terms ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.terms ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0.5rem 0;
+  background: #333;
+  color: white;
+}
